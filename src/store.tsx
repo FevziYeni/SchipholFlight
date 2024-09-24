@@ -6,8 +6,8 @@ export interface FlightData {
   price: number;
   departureTime: string;
   arrivalTime: string;
-  departureDate: string; // Bu satırı ekleyin
-  arrivalDate: string; // Bu satırı ekleyin
+  departureDate: string;
+  arrivalDate: string;
 }
 
 export interface Filters {
@@ -31,8 +31,8 @@ const initialState: RootState = {
       price: 200,
       departureTime: "7:30 AM",
       arrivalTime: "9:55 AM",
-      departureDate: "2023-05-15", // Bu satırı ekleyin
-      arrivalDate: "2023-05-15", // Bu satırı ekleyin
+      departureDate: "2026-05-15",
+      arrivalDate: "2027-05-15",
     },
     {
       departure: "Amsterdam",
@@ -40,8 +40,26 @@ const initialState: RootState = {
       price: 234,
       departureTime: "8:30 PM",
       arrivalTime: "10:25 PM",
-      departureDate: "2023-05-20", // Bu satırı ekleyin
-      arrivalDate: "2023-05-20", // Bu satırı ekleyin
+      departureDate: "2023-05-20",
+      arrivalDate: "2023-05-20",
+    },
+    {
+      departure: "Amsterdam",
+      arrival: "Berlin",
+      price: 234,
+      departureTime: "8:30 PM",
+      arrivalTime: "10:25 PM",
+      departureDate: "2023-05-20",
+      arrivalDate: "2023-05-20",
+    },
+    {
+      departure: "Amsterdam",
+      arrival: "Berlin",
+      price: 234,
+      departureTime: "8:30 PM",
+      arrivalTime: "10:25 PM",
+      departureDate: "2023-05-20",
+      arrivalDate: "2023-05-20",
     },
   ],
   filters: {

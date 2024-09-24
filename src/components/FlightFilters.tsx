@@ -58,7 +58,8 @@ const FlightFilters: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex items-center space-x-1 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+        {/* Kalkış şehri seçimi */}
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <FontAwesomeIcon
@@ -69,7 +70,7 @@ const FlightFilters: React.FC = () => {
           <select
             value={departureCity}
             onChange={(e) => setDepartureCity(e.target.value)}
-            className="w-60 pl-10 px-4 py-2 rounded-s-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="w-full pl-10 px-4 py-2 rounded-s-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600"
           >
             <option value="" disabled hidden></option>
             {cities.map((city) => (
@@ -80,6 +81,7 @@ const FlightFilters: React.FC = () => {
           </select>
         </div>
 
+        {/* Varış şehri seçimi */}
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <FontAwesomeIcon
@@ -90,7 +92,7 @@ const FlightFilters: React.FC = () => {
           <select
             value={arrivalCity}
             onChange={(e) => setArrivalCity(e.target.value)}
-            className="w-60 pl-10 px-4 py-2 rounded-e-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="w-full pl-10 px-4 py-2 rounded-e-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600"
           >
             <option value="" disabled hidden></option>
             {cities.map((city) => (
@@ -101,7 +103,8 @@ const FlightFilters: React.FC = () => {
           </select>
         </div>
 
-        <div className="relative flex-1 pl-4">
+        {/* Kalkış tarihi girişi */}
+        <div className="relative">
           <input
             type="date"
             value={departureDate}
@@ -110,8 +113,9 @@ const FlightFilters: React.FC = () => {
           />
         </div>
 
+        {/* Gidiş-dönüşse dönüş tarihi girişi */}
         {isRoundTrip && (
-          <div className="relative flex-1">
+          <div className="relative">
             <input
               type="date"
               value={returnDate}
