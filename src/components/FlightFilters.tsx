@@ -113,7 +113,7 @@ const FlightFilters: React.FC = () => {
           />
         </div>
 
-        {/* Gidiş-dönüşse dönüş tarihi girişi */}
+        {/*Dönüş tarihi girişi */}
         {isRoundTrip && (
           <div className="relative">
             <input
